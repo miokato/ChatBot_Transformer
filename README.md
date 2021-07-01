@@ -1,0 +1,2 @@
+# ChatBot Transformer
+Pytorchの独英翻訳サンプルを元に日本語のチャットボットをつくる

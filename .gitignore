@@ -1,0 +1,8 @@
+documents/
+.idea/
+study/
+.DS_Store
+*.pyc
+data/
+app/.data/
+.vector_cache/
