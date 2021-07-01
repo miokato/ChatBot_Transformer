@@ -206,7 +206,7 @@ class Trainer:
         num_tokens = src.shape[0]
         src_mask = (torch.zeros(num_tokens, num_tokens)).type(torch.bool)
         tgt_tokens = self.greedy_decode(
-            self.model, src, src_mask, max_len=num_tokens+5, start_symbol=self.symbol.bos_idx).flatten()
+            src, src_mask, max_len=num_tokens+5, start_symbol=self.symbol.bos_idx).flatten()
         return " ".join(self.vocab.lookup_tokens(list(tgt_tokens.cpu().numpy()))).replace("<bos>", "").replace("<eos>", "")
 
     def save(self, path):
